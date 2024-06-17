@@ -24,11 +24,10 @@ python3 -u main.py \
 --train-path "${DATA_DIR}/train.txt.json" \
 --valid-path "${DATA_DIR}/valid.txt.json" \
 --task ${TASK} \
---batch-size 1024 \
+--batch-size 1184 \
 --print-freq 20 \
 --additive-margin 0.02 \
 --use-amp \
---use-self-negative \
 --pre-batch 0 \
 --finetune-t \
 --epochs 50 \
