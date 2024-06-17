@@ -41,7 +41,7 @@ class CustomBertModel(nn.Module, ABC):
         self.pre_batch_exs = [None for _ in range(num_pre_batch_vectors)]
 
         self.hr_bert = AutoModel.from_pretrained(args.pretrained_model)
-        self.tail_bert = deepcopy(self.hr_bert)
+        self.tail_bert = self.hr_bert
 
     def _encode(self, encoder, token_ids, mask, token_type_ids):
         outputs = encoder(input_ids=token_ids,
