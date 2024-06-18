@@ -12,9 +12,6 @@ def rerank_by_graph(batch_score: torch.tensor,
                     examples: List[Example],
                     entity_dict: EntityDict):
 
-    if args.neighbor_weight < 1e-6:
-        return
-
     for idx in range(batch_score.size(0)):
         cur_ex = examples[idx]
         n_hop_indices = get_link_graph().get_n_hop_entity_indices(cur_ex.head_id,
