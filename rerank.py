@@ -12,9 +12,6 @@ def rerank_by_graph(batch_score: torch.tensor,
                     examples: List[Example],
                     entity_dict: EntityDict):
 
-    if args.task == 'wiki5m_ind':
-        assert args.neighbor_weight < 1e-6, 'Inductive setting can not use re-rank strategy'
-
     if args.neighbor_weight < 1e-6:
         return
 
