@@ -45,6 +45,8 @@ parser.add_argument('--finetune-t', action='store_true',
                     help='make temperature as a trainable parameter or not')
 parser.add_argument('--max-num-tokens', default=50, type=int,
                     help='maximum number of tokens')
+parser.add_argument('--use-self-negative', action='store_true',
+                    help='use head entity as negative')
 
 parser.add_argument('-j', '--workers', default=1, type=int, metavar='N',
                     help='number of data loading workers')
