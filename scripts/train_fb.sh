@@ -29,7 +29,7 @@ python3 -u main.py \
 --additive-margin 0.02 \
 --use-amp \
 --finetune-t \
---pre-batch 2 \
+--pre-batch 0 \
 --epochs 10 \
 --workers 4 \
 --max-to-keep 5 "$@"
